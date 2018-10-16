@@ -1,10 +1,8 @@
 <template>
-    <div class="projects">
-      This is a view of all of my projects.  Below should be all of the projects from ProjectData:
-      <li v-for="project in projects">
-        <h2>{{ project.name }}</h2>
-      </li>
-    </div>
+  <div class="projects">
+      This is one of my many projects: {{ project.name }}
+      <router-link :to="project.to">Link to project</router-link>
+  </div>
 </template>
 
 <script>
@@ -12,11 +10,7 @@ import ProjectData from '../../data/ProjectData'
 
 export default {
   name: 'Projects',
-  data () {
-      return {
-          projects: ProjectData
-      }
-  }
+  props: ['project']
 }
 </script>
 
@@ -33,5 +27,4 @@ li {
 a {
   color: #42b983;
 }
-
 </style>

@@ -14,7 +14,7 @@ import ProjectData from '../../data/ProjectData'
 
 export default {
   name: 'Projects',
-  props: ['title'],
+  props: ['project'],
   data () {
       return ProjectData[this.$route.params.name]
   }
