@@ -18,7 +18,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
+.intro {
+  height: 100vh;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 ul {
   list-style-type: none;
   padding: 0;

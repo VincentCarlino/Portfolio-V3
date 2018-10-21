@@ -1,16 +1,20 @@
 <template>
   <div class="projects">
       This is one of my many projects: {{ project.name }}
-      <router-link :to="project.to">Link to project</router-link>
+      <Button :link="project.to" text="see more"/>
   </div>
 </template>
 
 <script>
 import ProjectData from '../../data/ProjectData'
+import Button from '../Button'
 
 export default {
   name: 'Projects',
-  props: ['project']
+  props: ['project'], 
+  components: {
+    'Button': Button
+  },
 }
 </script>
 
@@ -23,8 +27,5 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>

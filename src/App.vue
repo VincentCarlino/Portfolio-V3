@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition name="fade" mode="out-in">
+    <transition name="slide" mode="out-in">
       <router-view/>
     </transition>
   </div>
@@ -25,7 +25,8 @@ $dot-space: 12px;
 h1 {
   font-family: 'Noto Serif', serif;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 90px;
+  margin: 0;
 }
 
 h2 {
@@ -37,10 +38,10 @@ h2 {
   color: $red;
 }
 
-.fade-enter-active, .fade-leave-active {
+.slide-enter-active, .slide-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to {
+.slide-enter, .slide-leave-to {
   opacity: 0;
 }
 
@@ -48,7 +49,7 @@ body {
   background: radial-gradient(rgba(246,73,66, .4) 13%, transparent 5%) 8px 9px;
 	background-size: 12px 12px;
   background-attachment: fixed;
-  margin: 80px 140px;
+  margin: 0 140px;
   height: 9000px;
 
 }
@@ -60,6 +61,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #272727;
-  margin-top: 60px;
 }
 </style>
