@@ -1,31 +1,55 @@
 <template>
-  <div class="projects">
-      This is one of my many projects: {{ project.name }}
+  <div class="project">
+    <div class="text project-content">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.tagline }}</p>
       <Button :link="project.to" text="see more"/>
+    </div>
+    <div class="images project-content">
+      <Mockup :src="project.image"/>
+    </div>
   </div>
+
 </template>
 
 <script>
 import ProjectData from '../../data/ProjectData'
 import Button from '../Button'
+import Mockup from '../Mockup'
 
 export default {
+  // TODO: Refine this component so it matches the wireframes.  User the order prop to determine where the subcomponents are place/how the text is aligned.
   name: 'Projects',
-  props: ['project'], 
+  props: ['project', 'order'],
   components: {
-    'Button': Button
+    'Button': Button,
+    'Mockup': Mockup
   },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.project {
+  display: flex;
+  margin: 40px 0;
+
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.project-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.images {
+  flex: 8;
+}
+
+.text {
+  align-self: center;
+  text-align: right;
+  flex: 6;
+  border-right: solid 1px black;
+  height: 100%;
 }
 </style>

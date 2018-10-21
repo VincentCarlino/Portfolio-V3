@@ -22,20 +22,68 @@ $white: #F2F4F4;
 $dot-size: 2px;
 $dot-space: 12px;
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
 h1 {
   font-family: 'Noto Serif', serif;
   font-weight: bold;
-  font-size: 90px;
+  font-size: 80px;
   margin: 0;
 }
 
 h2 {
   font-family: 'Noto Serif', serif;
   font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 48px;
+}
+
+h3 {
+  font-family: 'Noto Serif', serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+p {
+  font-size: 20px;
 }
 
 .red {
   color: $red;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .slide-enter-active, .slide-leave-active {
@@ -49,7 +97,7 @@ body {
   background: radial-gradient(rgba(246,73,66, .4) 13%, transparent 5%) 8px 9px;
 	background-size: 12px 12px;
   background-attachment: fixed;
-  margin: 0 140px;
+  margin: 0 100px;
   height: 9000px;
 
 }

@@ -1,30 +1,32 @@
 <template>
   <div class="home">
-      <Intro 
+      <Intro
         foo="This is a prop"/>
-      <Skills />
-      <ProjectHome :project="projects['mass-hike']" />
-      <ProjectHome :project="projects['portfolio-v2']" />
+      <Skills :skillsets="skillsets"/>
+      <ProjectsHome :projects="projects" />
   </div>
 </template>
 
 <script>
 import Intro from './Intro/Intro'
 import Skills from './Skills/Skills'
-import ProjectHome from '../Projects/ProjectHome'
+import ProjectsHome from '../Projects/ProjectsHome'
+import SkillData from '../../data/SkillData.js'
 import ProjectData from '../../data/ProjectData.js'
 
 export default {
   name: 'Home',
   components: {
     'Intro': Intro,
-    'ProjectHome': ProjectHome
+    'Skills': Skills,
+    'ProjectsHome': ProjectsHome
   },
   data () {
     return {
       name: 'Vinny',
       other: 'do other things',
-      projects: ProjectData
+      projects: ProjectData,
+      skillsets: SkillData
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="intro">
-      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based web developer.  I design and build web products and {{ foo }}.</h1>
+      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based web developer.  I design and build web products and my girlfriend likes to pop my pimples.</h1>
   </div>
 </template>
 
@@ -21,25 +21,14 @@ export default {
 <style lang="scss" scoped>
 
 .intro {
+  min-height: 900px;
   height: 100vh;
   position: relative;
 }
 
 h1 {
   position: absolute;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>
