@@ -1,17 +1,12 @@
 <template>
   <div class="home">
-      <Nav />
-      <div class="content">
-        <Intro
-          foo="This is a prop"/>
-        <Skills :skillsets="skillsets"/>
-        <ProjectsHome :projects="projects" />
-      </div>
+    <Intro/>
+    <Skills :skillsets="skillsets"/>
+    <ProjectsHome :projects="projects" />
   </div>
 </template>
 
 <script>
-import Nav from '../Nav'
 import Intro from './Intro/Intro'
 import Skills from './Skills/Skills'
 import ProjectsHome from '../Projects/ProjectsHome'
@@ -21,7 +16,6 @@ import ProjectData from '../../data/ProjectData.js'
 export default {
   name: 'Home',
   components: {
-    'Nav': Nav,
     'Intro': Intro,
     'Skills': Skills,
     'ProjectsHome': ProjectsHome

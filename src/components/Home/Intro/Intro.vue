@@ -1,6 +1,6 @@
 <template>
   <div class="intro" id="home">
-      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based web developer.  I design and build web products and my girlfriend likes to pop my pimples.</h1>
+      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based developer.  I design and build web products and [INSERT SOMETHING ELSE HERE THAT IS FUNNY].</h1>
   </div>
 </template>
 
