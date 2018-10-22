@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="skills" id="skills">
     <h2>Here are some of my <span class="red">skills</span></h2>
     <div class="skillsets">
         <div class="offset"></div>

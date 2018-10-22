@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <div class="intro" id="home">
       <h1>I'm <span class="red">{{ name }}</span>, a Boston-based web developer.  I design and build web products and my girlfriend likes to pop my pimples.</h1>
   </div>
 </template>
