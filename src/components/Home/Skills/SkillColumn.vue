@@ -16,8 +16,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .skill-column {
-  padding: 0 20px;
-  flex: 1;
+  margin-top: 40px;
+  padding-right: 60px;
 }
 
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div class="intro" id="home">
-      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based developer.  I design and build web products and [INSERT SOMETHING ELSE HERE THAT IS FUNNY].</h1>
+      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based developer.
+      I design and build web products and I love dipping my toes into UX/UI.</h1>
   </div>
 </template>
 

@@ -26,7 +26,6 @@ router-link, a {
   font-weight: bold;
   font-size: 20px;
   padding: 10px 20px;
-  margin: 10px;
   background: $white;
   border: solid 2px $red;
   box-shadow: 0px 10px 0px 0px $red;

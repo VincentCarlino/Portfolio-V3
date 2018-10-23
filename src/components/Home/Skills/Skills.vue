@@ -1,11 +1,11 @@
 <template>
   <div class="skills" id="skills">
-    <h2>Here are some of my <span class="red">skills</span></h2>
     <div class="skillsets">
-        <div class="offset"></div>
-        <SkillColumn v-for="skillset in skillsets"
-                    :skillset="skillset"
-                    v-bind:key="skillset.title"></SkillColumn>
+      <h2 class="skill-title">Here are some of my <span class="red">skills</span></h2>
+      <SkillColumn v-for="skillset in skillsets"
+                  :skillset="skillset"
+                  v-bind:key="skillset.title"></SkillColumn>
+
     </div>
   </div>
 </template>
@@ -28,13 +28,18 @@ export default {
 
 <style scoped>
 
+.skill-title {
+  flex: 1;
+  max-width: 500px;
+}
+
 .offset {
     flex: 1;
 }
 
 .skillsets {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     column-gap: 20px;
 }
 

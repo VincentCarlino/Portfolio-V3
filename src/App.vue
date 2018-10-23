@@ -16,6 +16,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
 
 $red: rgb(246,73,66);
+$purple: #6634ff;
+$blue: #3472ff;
 $red-transparent: rgba(246,73,66, .4);
 $white: #F2F4F4;
 // background values
@@ -51,7 +53,7 @@ img {
 h1 {
   font-family: 'Noto Serif', serif;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 85px;
   margin: 0;
 }
 
@@ -59,23 +61,29 @@ h2 {
   font-family: 'Noto Serif', serif;
   font-weight: bold;
   padding-bottom: 20px;
-  font-size: 48px;
+  font-size: 52px;
 }
 
 h3 {
   font-family: 'Noto Serif', serif;
   font-weight: bold;
-  padding-bottom: 20px;
-  font-size: 40px;
+  padding-bottom: 5px;
+  font-size: 45px;
 }
 
 h4 {
   font-weight: bold;
+  font-size: 40px;
+}
+
+h5 {
   font-size: 35px;
+  font-style: italic;
 }
 
 p {
-  font-size: 20px;
+  font-size: 25px;
+  padding-bottom: 5px;
 }
 
 .red {
@@ -83,6 +91,7 @@ p {
 }
 
 .underline {
+  color: $red;
   text-decoration: underline;
 }
 
@@ -97,8 +106,7 @@ body {
   background: radial-gradient(rgba(246,73,66, .4) 13%, transparent 5%) 8px 9px;
 	background-size: 12px 12px;
   background-attachment: fixed;
-  margin: 0 100px;
-  height: 9000px;
+  margin: 0 150px;
 
 }
 
@@ -106,6 +114,7 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 40px;
+  max-width: 1600px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #272727;

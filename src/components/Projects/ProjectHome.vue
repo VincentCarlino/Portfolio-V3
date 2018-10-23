@@ -32,7 +32,7 @@ export default {
 
 .project {
   display: flex;
-  margin: 40px 0;
+  margin-bottom: 140px;
 
 }
 

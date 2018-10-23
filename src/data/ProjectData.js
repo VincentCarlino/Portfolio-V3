@@ -11,7 +11,7 @@ export default {
     'portfolio-v2': {
         name: 'Web Portfolio V2',
         tagline: 'A foray into personal branding and web design',
-        image: 'masshike-desktop.png',
+        image: '/static/portfolio-v2-desktop.png',
         start: 'January 2018',
         end: 'April 2018',
         skills: ['HTML', 'CSS'],
