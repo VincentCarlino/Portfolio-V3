@@ -1,36 +1,27 @@
 <template>
-  <div class="404">
-      <div>{{ text }}</div>
-      <router-link to="/">Let's try that from the top</router-link>
+  <div class="error">
+    <h2>Uh oh.  Looks like that page doesn't exist</h2>
+    <Button link="/" text="Let's take that from the top"/>
   </div>
-  
+
 </template>
 
 <script>
+import Button from './Button'
+
 export default {
   name: '404',
-  data () {
-    return {
-      text: 'Uh oh.  Looks like this page doesn\'t exist.'
-    }
+  components: {
+    'Button': Button
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.error {
+  text-align: center;
+  height: 100vh;
+  padding: 200px 0;
+
 }
 </style>

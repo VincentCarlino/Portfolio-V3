@@ -1,9 +1,9 @@
 <template>
     <div class="mockup-container">
         <div class="bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
+            <div class="bubble bg-red"></div>
+            <div class="bubble bg-yellow"></div>
+            <div class="bubble bg-green"></div>
         </div>
         <img :src="src" />
     </div>
@@ -24,6 +24,9 @@ export default {
 <style lang="scss" scoped>
 
 $red: rgb(246,73,66);
+$yellow: rgb(255, 224, 102);
+$green: rgb(140, 233, 154);
+$gray: #343a40;
 
 .mockup-container {
     width: auto;
@@ -35,16 +38,27 @@ $red: rgb(246,73,66);
 .bubble {
     height: 15px;
     width: 15px;
-    background-color: $red;
+    background-color: white;
     margin: 0 5px;
     border-radius: 100%;
 }
 
 .bubbles {
-    background-color: #e8e8e8;
+    background-color: $gray;
     display: flex;
     padding: 15px 10px;
 }
 
+.bg-red {
+    background-color: $red;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-green {
+    background-color: $green;
+}
 
 </style>

@@ -18,7 +18,7 @@ $white: #FFFFFF;
 router-link, a {
   transition: all cubic-bezier(0.29, -0.02, 0, 1) .2s;
   text-transform: lowercase;
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   display: inline-block;
   text-decoration: none;
   color: $red;
@@ -28,12 +28,19 @@ router-link, a {
   padding: 10px 20px;
   background: $white;
   border: solid 2px $red;
-  box-shadow: 0px 10px 0px 0px $red;
+  box-shadow: 0px 8px 0px 0px $red;
+  margin-top: 20px;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 0px 0px $red;
+  }
 
   &:active {
     transform: translateY(0px);
     box-shadow: 0px 0px 0px 0px $red;
   }
+
 }
 
 ul {
