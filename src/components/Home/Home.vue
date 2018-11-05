@@ -1,8 +1,10 @@
 <template>
-  <div class="home">
-    <Intro/>
-    <Skills :skillsets="skillsets"/>
-    <ProjectsHome :projects="projects" />
+  <div class="bg home-bg">
+    <div class="page-wrapper">
+      <Intro v-scroll-reveal/>
+      <Skills :skillsets="skillsets"/>
+      <ProjectsHome :projects="projects" />
+    </div>
   </div>
 </template>
 
@@ -32,7 +34,6 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  margin-left: 40px;
-}
+
+
 </style>

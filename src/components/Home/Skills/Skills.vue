@@ -27,9 +27,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 
 .skill-title {
@@ -53,5 +54,4 @@ export default {
 .skills {
   padding: 100px 0;
 }
-
 </style>

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// TODO: Make entire site mobile-friendly
 export default {
   name: 'App'
 }
@@ -45,35 +46,27 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-@mixin for-phone-only {
+@mixin mobile {
   @media (max-width: 599px) { @content; }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
-}
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+@mixin tablet {
+  @media (max-width: 1200px) { @content; }
 }
 
+.page-wrapper {
+  padding: 0 170px;
 
-body {
-  background-color: #fafafa;
-  background: radial-gradient(rgba(246,73,66, .2) 13%, transparent 5%) 8px 9px;
-	background-size: 22px 22px;
-  background-attachment: fixed;
-  margin: 0 150px;
-  color: #444;
-
-  @include for-phone-only {
-    margin: 0 20px;
+  @include tablet {
+    padding: 0 40px;
   }
 
+    @include mobile {
+    padding: 0 10px;
+  }
+}
+
+.project-wrapper {
+  padding-top: 120px;
 }
 
 img {
@@ -88,7 +81,11 @@ h1 {
   font-size: 90px;
   margin: 0;
 
-  @include for-phone-only {
+  @include tablet {
+    font-size: 70px;
+  }
+
+  @include mobile {
     font-size: 50px;
   }
 }
@@ -112,7 +109,7 @@ h3 {
 h4 {
   font-family: 'Noto Serif';
   font-weight: bold;
-  font-size: 35px;
+  font-size: 28px;
 }
 
 h5 {
@@ -123,9 +120,8 @@ h5 {
 
 p {
   font-family: 'Noto Serif';
-  letter-spacing: -1px !important;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   padding-bottom: 5px;
 }
 
@@ -134,7 +130,6 @@ p {
 }
 
 .underline {
-  color: $red;
   text-decoration: underline;
 }
 
@@ -146,22 +141,25 @@ p {
 }
 
 .icon {
-  font-size: 80px;
+  font-size: 76px;
   color: $red;
 
-  @include for-phone-only {
+  @include mobile {
     font-size: 40px;
   }
 
 }
 
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  max-width: 1600px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.bg {
+  min-height: 100vh;
 }
+
+.home-bg {
+  background: radial-gradient(rgba(246, 73, 66, 0.2) 13%, transparent 5%) 8px
+    9px;
+  background-color: #fafafa;
+  background-size: 22px 22px;
+  background-attachment: fixed;
+}
+
 </style>

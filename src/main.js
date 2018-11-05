@@ -2,10 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import Mockup from './components/Mockup'
 import router from './router'
 import Parallax from 'vue-parallaxy'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCode, faWrench, faPaintRoller, faCheck, faCheckCircle, faCheckSquare, faDesktop, faTerminal, faKey } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faWrench, faPaintRoller, faCheck, faCheckCircle, faCheckSquare, faHiking, faDesktop, faTerminal, faKey } from '@fortawesome/free-solid-svg-icons'
 import { faGrinBeam, faKeyboard } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ScrollReveal from 'scrollreveal'
@@ -22,7 +23,7 @@ library.add(faDesktop)
 library.add(faGrinBeam)
 library.add(faTerminal)
 library.add(faKeyboard)
-
+library.add(faHiking)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueScrollReveal, {
@@ -31,6 +32,7 @@ Vue.use(VueScrollReveal, {
   origin: 'bottom',
   opacity: 0
 });
+Vue.component('Mockup', Mockup)
 
 Vue.config.productionTip = false
 

@@ -1,8 +1,8 @@
 <template>
   <div class="intro" id="home">
     <div class="content">
-      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based developer <span class="icon"><font-awesome-icon :icon="['far', 'keyboard']" /></span></h1>
-      <h1>I build web products <span class="icon"><font-awesome-icon icon="desktop" /></span> and I love to make fun user interfaces <span class="icon"><font-awesome-icon :icon="['far', 'grin-beam']" /></span></h1>
+      <h1>I'm <span class="red">{{ name }}</span>, a Boston-based developer.</h1>
+      <h1>I build web products and I love to make fun user interfaces <span class="icon"><font-awesome-icon :icon="['far', 'grin-beam']" /></span></h1>
       </div>
   </div>
 </template>
@@ -26,15 +26,10 @@ export default {
 $red: rgb(246,73,66);
 
 .intro {
-  min-height: 900px;
-  height: 100vh;
-  position: relative;
+  padding: 12.5% 0;
 }
 
 .content {
   max-width: 1480px;
-  position: absolute;
-  top: 47%;
-  transform: translateY(-50%);
 }
 </style>

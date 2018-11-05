@@ -28,6 +28,7 @@ router-link, a {
   padding: 10px 20px;
   background: $white;
   border: solid 2px $red;
+  border-radius: 8px;
   box-shadow: 0px 8px 0px 0px $red;
   margin-top: 20px;
 

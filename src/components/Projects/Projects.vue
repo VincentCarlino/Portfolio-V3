@@ -1,17 +1,24 @@
 <template>
-    <div class="projects">
-      This is a view of all of my projects.  Below should be all of the projects from ProjectData:
-      <li v-for="project in projects">
-        <h2>{{ project.name }}</h2>
-      </li>
+  <div class="bg home-bg">
+    <div class="page-wrapper">
+      <div class="projects">
+        <div class="item" v-for="project in projects" v-bind="project.name">
+          <ProjectListItem :project="project" />
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 import ProjectData from '../../data/ProjectData'
+import ProjectListItem from './ProjectListItem'
 
 export default {
   name: 'Projects',
+  components: {
+    'ProjectListItem': ProjectListItem
+  },
   data () {
       return {
           projects: ProjectData
@@ -22,16 +29,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
 </style>

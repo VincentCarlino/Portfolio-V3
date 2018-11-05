@@ -1,12 +1,17 @@
+import { MassHike } from '../components/Projects/Project'
+
 export default {
     'mass-hike': {
         name: 'Mass Hike',
         tagline: 'A marketing site and booking platform that brings urban communities closer to nature.',
         image: '/static/masshike-desktop.png',
+        mobile: '/static/masshike-mobile.png',
+        logo: '/static/masshike-logo.svg',
         start: 'January 2018',
         end: 'April 2018',
         skills: ['React', 'Javascript'],
-        to: '/projects/mass-hike'
+        to: '/projects/mass-hike',
+        roles: ['Developer']
     },
     'portfolio-v2': {
         name: 'Web Portfolio V2',
@@ -15,7 +20,8 @@ export default {
         start: 'January 2018',
         end: 'April 2018',
         skills: ['HTML', 'CSS'],
-        to: '/projects/portfolio-v2'
+        to: '/projects/portfolio-v2',
+        roles: ['Developer', 'Designer']
     },
     'catalant': {
         name: 'Catalant',
@@ -24,7 +30,8 @@ export default {
         start: 'January 2018',
         end: 'April 2018',
         skills: ['Python', 'HTML', 'CSS', 'Flask'],
-        to: '/projects/catalant'
+        to: '/projects/catalant',
+        roles: ['Engineer']
     },
 
 }

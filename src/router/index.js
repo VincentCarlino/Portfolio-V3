@@ -5,6 +5,8 @@ import About from '@/components/About'
 import Projects from '@/components/Projects/Projects'
 import Project from '@/components/Projects/Project'
 import PageNotFound from '@/components/PageNotFound'
+import MassHike from '@/components/Projects/MassHike'
+import WebPortfolioV2 from '@/components/Projects/WebPortfolioV2'
 
 import ProjectData from '../data/ProjectData'
 
@@ -22,37 +24,53 @@ const router = new Router({
       }
     },
     {
-      path:'/about',
-      name:'About',
+      path: '/about',
+      name: 'About',
       component: About,
       meta: {
         title: 'Vinny Carlino // About Me'
       }
     },
     {
-      path:'/projects',
-      name:'Projects',
+      path: '/projects',
+      name: 'Projects',
       component: Projects,
       meta: {
         title: 'Vinny Carlino // Projects'
       }
     },
     {
-      path:'/projects/:name',
-      name:'Project',
+      path: '/projects/mass-hike',
+      name: 'Mass Hike',
+      component: MassHike,
+      meta: {
+        title: 'Vinny Carlino // Mass Hike'
+      }
+    },
+    {
+      path: '/projects/portfolio-v2',
+      name: 'Web Portfolio V2',
+      component: WebPortfolioV2,
+      meta: {
+        title: 'Vinny Carlino // Web Portfolio V2'
+      }
+    },
+    {
+      path: '/projects/*',
+      name: 'Project',
       component: Project,
       beforeEnter: (to, from, next) => {
         //Check if the project exists in project data, else 404
-        function isValid (param) {
-           return ProjectData[param]
+        function isValid(param) {
+          return ProjectData[param]
         }
 
-         if (!isValid(to.params.name)) {
-           next({ name: '404' });
-         }
+        if (!isValid(to.params.name)) {
+          next({ name: '404' });
+        }
 
-         next();
-       },
+        next();
+      },
       meta: {
         title: 'Vinny Carlino // Project'
       }
@@ -66,7 +84,7 @@ const router = new Router({
       }
     }
   ],
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, reject) => { //Prevents window position from being reset until after the page transition has run.
       setTimeout(() => { // TODO: Set a case where the user uses the back or forward buttons and keep the right page position.
         resolve({ x: 0, y: 0 })
@@ -77,7 +95,7 @@ const router = new Router({
 
 const DEFAULT_TITLE = 'Vinny Carlino // Web Engineer';
 router.afterEach((to, from) => {
-    document.title = to.meta.title || DEFAULT_TITLE;
+  document.title = to.meta.title || DEFAULT_TITLE;
 });
 
 export default router

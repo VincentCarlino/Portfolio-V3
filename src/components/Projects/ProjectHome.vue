@@ -1,6 +1,6 @@
 <template>
   <div class="project">
-    <div v-if="!swap" class="text project-content left" v-scroll-reveal="{ delay: 250}">
+    <div v-if="!swap" class="project-content left text" v-scroll-reveal="{ delay: 250}">
       <h2>{{ project.name }}</h2>
       <h5>{{ project.start }} - {{ project.end }}</h5>
       <p>{{ project.tagline }}</p>
@@ -9,7 +9,7 @@
     <div class="images project-content" v-scroll-reveal="{ delay: 350}">
       <Mockup :src="project.image"/>
     </div>
-    <div v-if="swap" class="text project-content right" v-scroll-reveal="{ delay: 250}">
+    <div v-if="swap" class="project-content right text" v-scroll-reveal="{ delay: 250}">
       <h2>{{ project.name }}</h2>
       <h5>{{ project.start }} - {{ project.end }}</h5>
       <p>{{ project.tagline }}</p>
@@ -36,37 +36,75 @@ export default {
 }
 </script>
 
-<style scoped>
-/* TODO: Style the project (add padding, mostly) */
+<style lang="scss" scoped>
+
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1200px) { @content; }
+}
 .project {
   display: flex;
+  justify-content: space-between;
   margin-top: 100px;
+
+  @include mobile {
+    flex-direction: column;
+  }
 
 }
 
 .project-content {
-  padding: 20px;
   flex: 1;
+
+
+  @include mobile {
+    padding: 0;
+    padding-bottom: 30px;
+  }
 }
 
 .images {
   flex: 8;
+  order: 1;
+
+  @include mobile {
+    order: 0;
+  }
+
 }
 
 .text {
   align-self: center;
   flex: 6;
   height: 100%;
+  order: 1;
+
 }
 
 .left {
   text-align: right;
+  padding-right: 20px;
+  margin-right: 20px;
   border-right: solid 1px black;
+
+  @include mobile {
+    text-align: left;
+    border: none;
+  }
 }
 
 .right {
-  margin-left: 20px;
+  padding-left: 20px;
+  margin-left: 40px;
   text-align: left;
   border-left: solid 1px black;
+
+
+  @include mobile {
+    border: none;
+    margin: 0;
+  }
 }
 </style>
