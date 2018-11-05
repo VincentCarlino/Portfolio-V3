@@ -1,15 +1,15 @@
 <template>
   <div class="project">
-    <div v-if="!swap" class="project-content left text" v-scroll-reveal="{ delay: 250}">
+    <div v-if="!swap" class="project-content left text">
       <h2>{{ project.name }}</h2>
       <h5>{{ project.start }} - {{ project.end }}</h5>
       <p>{{ project.tagline }}</p>
       <Button :link="project.to" text="see more"/>
     </div>
-    <div class="images project-content" v-scroll-reveal="{ delay: 350}">
+    <div class="images project-content">
       <Mockup :src="project.image"/>
     </div>
-    <div v-if="swap" class="project-content right text" v-scroll-reveal="{ delay: 250}">
+    <div v-if="swap" class="project-content right text">
       <h2>{{ project.name }}</h2>
       <h5>{{ project.start }} - {{ project.end }}</h5>
       <p>{{ project.tagline }}</p>

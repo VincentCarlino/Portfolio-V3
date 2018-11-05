@@ -28,7 +28,7 @@ library.add(faHiking)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueScrollReveal, {
   class: 'v-scroll-reveal',
-  distance: '150%',
+  distance: '10%',
   origin: 'bottom',
   opacity: 0
 });

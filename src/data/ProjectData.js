@@ -26,7 +26,8 @@ export default {
     'catalant': {
         name: 'Catalant',
         tagline: 'An online marketplace dedicated to getting work done faster and smarter.',
-        image: 'masshike-desktop.png',
+        image: '/static/ct-desktop.png',
+        mobile: '/static/ct-mobile.png',
         start: 'January 2018',
         end: 'April 2018',
         skills: ['Python', 'HTML', 'CSS', 'Flask'],

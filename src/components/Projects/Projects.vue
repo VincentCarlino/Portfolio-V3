@@ -1,8 +1,9 @@
 <template>
   <div class="bg home-bg">
-    <div class="page-wrapper">
+    <div class="page-wrapper project-wrapper">
+      <h2>Here is a list of all the things I've helped <span class="red">make</span></h2>
       <div class="projects">
-        <div class="item" v-for="project in projects" v-bind="project.name">
+        <div v-scroll-reveal class="item" v-for="project in projects" v-bind="project.name">
           <ProjectListItem :project="project" />
         </div>
       </div>
@@ -31,7 +32,7 @@ export default {
 <style scoped>
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
 }
 </style>

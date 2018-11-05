@@ -20,7 +20,7 @@ $red: rgb(246,73,66);
 $purple: #6634ff;
 $dark-blue: #003479;
 $red-transparent: rgba(246,73,66, .4);
-$white: #F2F4F4;
+$white: #fafafa;
 // background values
 $dot-size: 2px;
 $dot-space: 12px;
@@ -46,6 +46,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @mixin mobile {
   @media (max-width: 599px) { @content; }
 }
@@ -54,7 +59,7 @@ time, mark, audio, video {
 }
 
 .page-wrapper {
-  padding: 0 170px;
+  padding: 0 150px;
 
   @include tablet {
     padding: 0 40px;
@@ -157,9 +162,10 @@ p {
 .home-bg {
   background: radial-gradient(rgba(246, 73, 66, 0.2) 13%, transparent 5%) 8px
     9px;
-  background-color: #fafafa;
+  background-color: $white;
   background-size: 22px 22px;
   background-attachment: fixed;
+  color: #333;
 }
 
 </style>

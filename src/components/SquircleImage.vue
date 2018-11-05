@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div :class="squircle ? 'container' : ''">
         <img :src="src" />
     </div>
 </template>
@@ -7,7 +7,10 @@
 <script>
 export default {
   name: 'SquircleImage',
-  props: ['src']
+  props: {
+    'src': String,
+    'squircle': Boolean
+  }
 }
 </script>
 
@@ -18,7 +21,6 @@ export default {
   width: auto;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.14);
 }
 
 </style>
