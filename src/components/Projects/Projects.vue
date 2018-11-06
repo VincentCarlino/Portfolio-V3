@@ -29,10 +29,20 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
+@mixin tablet {
+  @media (max-width: 1200px) { @content; }
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
 }
 </style>

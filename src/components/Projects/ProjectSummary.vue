@@ -1,9 +1,11 @@
 <template>
   <div id="summary">
-
+      <h4 class="underline">Date</h4>
       <h5>{{ start }} - {{ end }}</h5>
-      <h4 class="underline">Skills</h4>
-      <p>{{ skills }} {{ start }} {{ end }} {{ roles }}</p>
+      <h4 class="underline">Technology</h4>
+      <p v-for="skill in skills">{{skill}} <font-awesome-icon icon="check" /></p>
+      <h4 class="underline">Roles</h4>
+      <p v-for="role in roles">{{role}} <font-awesome-icon icon="check" /></p>
   </div>
 </template>
 
@@ -18,7 +20,10 @@ export default {
 <style scoped>
 
 #summary {
+    border-left: solid;
     margin-top: 40px;
-    text-align: right;
+    padding-left: 40px;
+    position: sticky;
+    top: 100px;
 }
 </style>

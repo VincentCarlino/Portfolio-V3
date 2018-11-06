@@ -95,7 +95,6 @@ $beige: #f7f4e8;
   background-size: 22px 22px;
   background-attachment: fixed;
   color: $dark-green;
-  height: 9000px;
 }
 
 </style>
