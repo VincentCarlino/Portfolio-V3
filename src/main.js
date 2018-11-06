@@ -6,7 +6,7 @@ import Mockup from './components/Mockup'
 import router from './router'
 import Parallax from 'vue-parallaxy'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCode, faWrench, faPaintRoller, faCheck, faCheckCircle, faCheckSquare, faHiking, faDesktop, faArrowRight, faTerminal, faKey } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faWrench, faPaintRoller, faCheck, faCheckCircle, faCheckSquare, faHiking, faDesktop, faArrowRight, faArrowUp, faTerminal, faKey } from '@fortawesome/free-solid-svg-icons'
 import { faGrinBeam, faKeyboard } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ScrollReveal from 'scrollreveal'
@@ -25,6 +25,7 @@ library.add(faTerminal)
 library.add(faKeyboard)
 library.add(faHiking)
 library.add(faArrowRight)
+library.add(faArrowUp)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueScrollReveal, {
