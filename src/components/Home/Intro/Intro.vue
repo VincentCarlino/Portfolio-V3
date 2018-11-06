@@ -26,7 +26,9 @@ export default {
 $red: rgb(246,73,66);
 
 .intro {
-  padding: 12.5% 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 .content {
