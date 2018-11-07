@@ -20,10 +20,10 @@ export default {
 <style scoped>
 
 #summary {
-    border-left: solid;
-    margin-top: 40px;
-    padding-left: 40px;
+    border: solid;
+    padding: 20px;
+    margin-top: 10px;
     position: sticky;
-    top: 100px;
+    top: 70px;
 }
 </style>

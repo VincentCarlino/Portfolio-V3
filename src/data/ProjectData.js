@@ -4,6 +4,8 @@ export default {
     'mass-hike': {
         name: 'Mass Hike',
         tagline: 'A marketing site and booking platform that brings urban communities closer to nature',
+        article: [{'tag': 'p', 'content': 'This is a paragraph.'},
+                    {'tag': 'img', 'content': '/static/masshike-desktop.png'}],
         image: '/static/masshike-desktop.png',
         mobile: '/static/masshike-mobile.png',
         logo: '/static/masshike-logo.svg',
