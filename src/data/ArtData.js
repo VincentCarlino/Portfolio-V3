@@ -1,0 +1,1 @@
+export default ['/static/ct-desktop.png', '/static/ct-mobile.png','/static/masshike-desktop.png','/static/masshike-logo.svg','/static/masshike-mobile.png','/static/portfolio-v2-desktop.png']

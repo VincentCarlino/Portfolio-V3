@@ -7,6 +7,7 @@ import Project from '@/components/Projects/Project'
 import PageNotFound from '@/components/PageNotFound'
 import MassHike from '@/components/Projects/MassHike'
 import WebPortfolioV2 from '@/components/Projects/WebPortfolioV2'
+import ArtGallery from '@/components/Projects/ArtGallery'
 
 import ProjectData from '../data/ProjectData'
 
@@ -40,6 +41,14 @@ const router = new Router({
       }
     },
     {
+      path: '/art',
+      name: 'ArtGallery',
+      component: ArtGallery,
+      meta: {
+        title: 'Vinny Carlino // Art'
+      }
+    },
+    {
       path: '/projects/mass-hike',
       name: 'Mass Hike',
       component: MassHike,
@@ -56,12 +65,13 @@ const router = new Router({
       }
     },
     {
-      path: '/projects/*',
+      path: '/projects/:name',
       name: 'Project',
       component: Project,
       beforeEnter: (to, from, next) => {
-        //Check if the project exists in project data, else 404
         function isValid(param) {
+          console.log(ProjectData);
+          console.log(param);
           return ProjectData[param]
         }
 
@@ -76,7 +86,7 @@ const router = new Router({
       }
     },
     {
-      path: '*',
+      path: '/error',
       name: '404',
       component: PageNotFound,
       meta: {
@@ -94,6 +104,16 @@ const router = new Router({
 })
 
 const DEFAULT_TITLE = 'Vinny Carlino // Web Engineer';
+
+router.beforeEach((to, from, next) => {
+  if (!to.matched.length) {
+    next('/error');
+  } else {
+    next();
+  }
+});
+
+
 router.afterEach((to, from) => {
   document.title = to.meta.title || DEFAULT_TITLE;
 });

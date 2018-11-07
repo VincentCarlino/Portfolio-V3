@@ -9,7 +9,7 @@
             <div class="tags">
                 <h5 class="tag" v-for="skill in project.skills">{{skill}}</h5>
             </div>
-            <router-link :to="project.to" class="project-link"><font-awesome-icon icon="arrow-right" /></router-link>
+            <router-link v-if="project.to" :to="project.to" class="project-link"><font-awesome-icon icon="arrow-right" /></router-link>
         </div>
   </div>
 </template>

@@ -13,6 +13,11 @@ export default {
   methods: {
       generate: function(content) {
           var article = document.getElementById('article-content');
+          if(!content) {
+              var newElem = document.createElement('p');
+              newElem.appendChild(document.createTextNode('I\'m currently in the middle of writing some information about this project. Check back soon to see if it is updated!'));
+              article.appendChild(newElem);
+          }
 
           content.forEach(element => {
             var newElem = document.createElement(element.tag);

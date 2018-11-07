@@ -139,7 +139,7 @@ p {
 }
 
 .slide-enter-active, .slide-leave-active {
-  transition: opacity .5s;
+  transition: opacity 1s;
 }
 .slide-enter, .slide-leave-to {
   opacity: 0;
