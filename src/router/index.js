@@ -12,6 +12,7 @@ import ArtGallery from '@/components/Projects/ArtGallery'
 import ProjectData from '../data/ProjectData'
 
 Vue.use(Router)
+const DEFAULT_TITLE = 'Vinny Carlino // Web Engineer';
 
 const router = new Router({
   mode: 'history',
@@ -95,15 +96,14 @@ const router = new Router({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
-    return new Promise((resolve, reject) => { //Prevents window position from being reset until after the page transition has run.
-      setTimeout(() => { // TODO: Set a case where the user uses the back or forward buttons and keep the right page position.
-        resolve({ x: 0, y: 0 })
-      }, 500)
+    console.log(savedPosition);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(savedPosition ? savedPosition : { x: 0, y: 0 })
+      }, 1000)
     })
   }
 })
-
-const DEFAULT_TITLE = 'Vinny Carlino // Web Engineer';
 
 router.beforeEach((to, from, next) => {
   if (!to.matched.length) {

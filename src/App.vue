@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition name="slide" mode="out-in">
+    <transition name="slide" mode="out-in" @after-leave="afterLeave">
       <router-view/>
     </transition>
   </div>
@@ -9,7 +9,12 @@
 <script>
 // TODO: Make entire site mobile-friendly
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    afterLeave () {
+      this.$root.$emit('triggerScroll');
+    }
+  }
 }
 </script>
 
