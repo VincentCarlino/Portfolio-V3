@@ -17,13 +17,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
 
 #summary {
     border: solid;
     padding: 20px;
     margin-top: 10px;
+    margin-left: 20px;
     position: sticky;
     top: 70px;
+
+    @include mobile {
+      margin: 0;
+    }
 }
 </style>

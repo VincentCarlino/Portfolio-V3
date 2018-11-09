@@ -64,6 +64,9 @@ a {
 }
 
 .page-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
   padding: 0 150px;
 
   @include tablet {
@@ -76,7 +79,7 @@ a {
 }
 
 .project-wrapper {
-  padding-top: 120px;
+  padding-top: 40px;
 }
 
 img {
@@ -88,11 +91,11 @@ h1 {
   font-family: 'Circular', serif;
   letter-spacing: -2px !important;
   font-weight: 900;
-  font-size: 90px;
+  font-size: 72px;
   margin: 0;
 
   @include tablet {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   @include mobile {
@@ -106,6 +109,14 @@ h2 {
   font-weight: 900;
   padding-bottom: 20px;
   font-size: 46px;
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include mobile {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -114,18 +125,38 @@ h3 {
   font-weight: 900;
   padding-bottom: 5px;
   font-size: 40px;
+
+  @include tablet {
+    font-size: 28px;
+  }
+
+  @include mobile {
+    font-size: 24px;
+  }
 }
 
 h4 {
   font-family: 'Noto Serif';
   font-weight: bold;
   font-size: 28px;
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 h5 {
   font-family: 'Circular';
   font-size: 22px;
   margin-bottom: 5px;
+
+  @include mobile {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -133,6 +164,10 @@ p {
   font-weight: 400;
   font-size: 22px;
   padding-bottom: 5px;
+
+  @include mobile {
+    font-size: 16px;
+  }
 }
 
 .red {
@@ -151,7 +186,7 @@ p {
 }
 
 .icon {
-  font-size: 76px;
+  font-size: 55px;
   color: $red;
 
   @include mobile {

@@ -28,6 +28,10 @@ $mh-orange: #f05a28;
 $mh-yellow: #faaf3f;
 $mh-green: #558959;
 
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
 .mockup-container {
   width: auto;
   border-radius: 10px;
@@ -41,12 +45,24 @@ $mh-green: #558959;
   background-color: white;
   margin: 0 5px;
   border-radius: 100%;
+
+  @include mobile {
+    height: 7px;
+    width: 7px;
+    margin: 0 2px;
+  }
+
+
 }
 
 .bubbles {
   background-color: $gray;
   display: flex;
   padding: 15px 10px;
+
+  @include mobile {
+    padding: 9px 7px;
+  }
 }
 
 .bg-red {

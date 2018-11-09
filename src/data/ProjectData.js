@@ -3,7 +3,7 @@ import { MassHike } from '../components/Projects/Project'
 export default {
     'mass-hike': {
         name: 'Mass Hike',
-        tagline: 'A marketing site and booking platform that brings urban communities closer to nature',
+        tagline: 'A marketing site and booking platform that brings Boston\'s communities closer to nature',
         article: [{'tag': 'p', 'content': 'This is a paragraph.'},
                     {'tag': 'img', 'content': '/static/masshike-desktop.png'}],
         image: '/static/masshike-desktop.png',

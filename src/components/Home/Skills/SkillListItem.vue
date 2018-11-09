@@ -1,6 +1,6 @@
 <template>
   <div class="skill-item">
-    <p><span class="icon" ><font-awesome-icon icon="check" /></span>{{ skill }}</p>
+    <span class="icon" ><font-awesome-icon icon="check" /></span><p>{{ skill }}</p>
   </div>
 </template>
 
@@ -16,7 +16,9 @@ export default {
 <style scoped>
 
 .skill-item {
-    transform: translateX(-20px);
+  display: flex;
+  transform: translateX(-20px);
+  align-items: center;
 }
 
 .icon {

@@ -1,5 +1,6 @@
 <template>
   <div v-scroll-reveal id="article-content">
+      <h2>{{ tagline }}</h2>
       <!-- Pass in array of objects which contain a tag type, content. Parse into html-->
 
   </div>
@@ -9,7 +10,7 @@
 
 export default {
   name: 'ArticleContent',
-  props: ['article'],
+  props: ['article', 'tagline'],
   methods: {
       generate: function(content) {
           var article = document.getElementById('article-content');

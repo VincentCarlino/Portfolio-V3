@@ -81,6 +81,10 @@ export default {
   height: 100%;
   order: 1;
 
+  @include mobile {
+    align-self: auto;
+  }
+
 }
 
 .left {
@@ -103,6 +107,7 @@ export default {
 
 
   @include mobile {
+    padding: 0;
     border: none;
     margin: 0;
   }

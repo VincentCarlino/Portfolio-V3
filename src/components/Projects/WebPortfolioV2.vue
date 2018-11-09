@@ -37,6 +37,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
 .images {
   display: flex;
   margin-bottom: 60px;
@@ -63,7 +67,6 @@ export default {
 
 .content-right {
   flex: 1;
-  margin-left: 30px;
 }
 
 </style>
