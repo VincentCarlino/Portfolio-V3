@@ -34,8 +34,7 @@ export default {
 .art {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 150px;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: dense;
 
 }
@@ -43,8 +42,6 @@ export default {
 .image {
     position: relative;
     grid-column-start: auto;
-    grid-row-start: auto;
-    grid-column: span 2;
 
     > img {
         width: 100%;

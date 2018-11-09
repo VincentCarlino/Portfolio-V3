@@ -1,6 +1,6 @@
 <template>
   <div class="skill-item">
-    <span class="icon" ><font-awesome-icon icon="check" /></span><p>{{ skill }}</p>
+    <span class="icon" ><font-awesome-icon icon="check" /></span><h5>{{ skill }}</h5>
   </div>
 </template>
 

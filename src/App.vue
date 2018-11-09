@@ -68,13 +68,16 @@ a {
   margin-right: auto;
   max-width: 1200px;
   padding: 0 150px;
+  padding-bottom: 50px;
 
   @include tablet {
     padding: 0 40px;
+    padding-bottom: 50px;
   }
 
     @include mobile {
     padding: 0 10px;
+    padding-bottom: 50px;
   }
 }
 
@@ -138,10 +141,10 @@ h3 {
 h4 {
   font-family: 'Noto Serif';
   font-weight: bold;
-  font-size: 28px;
+  font-size: 32px;
 
   @include tablet {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   @include mobile {

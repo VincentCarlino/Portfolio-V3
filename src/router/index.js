@@ -96,7 +96,6 @@ const router = new Router({
     }
   ],
   scrollBehavior(to, from, savedPosition) {
-    console.log(savedPosition);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(savedPosition ? savedPosition : { x: 0, y: 0 })

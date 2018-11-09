@@ -41,18 +41,44 @@ export default {
   @media (max-width: 599px) { @content; }
 }
 
+@mixin tablet {
+  @media (max-width: 1200px) { @content; }
+}
+
 .images {
   display: flex;
   margin-bottom: 60px;
 
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
   .desktop {
     flex: 3;
     margin-right: 20px;
+
+    @include mobile {
+    margin-right: 0;
+  }
   }
 
   .mobile {
     flex: 1;
     margin-left: 20px;
+    margin-right: 20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .logo {
+    flex: 1;
+    margin-left: 20px;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 

@@ -61,7 +61,6 @@ export default {
 
   @include mobile {
     padding: 0;
-    padding-bottom: 30px;
   }
 }
 

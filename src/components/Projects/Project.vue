@@ -5,7 +5,7 @@
       <div class="images">
         <!-- Conditionally render the main images for the products -->
         <div class="desktop"><Mockup v-scroll-reveal='{ delay : 350 }' :src="image"/></div>
-        <div class="mobile"><Mockup v-scroll-reveal='{ delay: 200 }' :src="mobile"/></div>
+        <div v-if="mobile" class="mobile"><Mockup v-scroll-reveal='{ delay: 200 }' :src="mobile"/></div>
       </div>
       <div class="article">
         <div v-scroll-reveal class="content-left">
@@ -27,7 +27,6 @@ import ProjectSummary from './ProjectSummary'
 
 export default {
   name: 'Projects',
-  props: ['project'],
   components: {
     'ProjectSummary': ProjectSummary,
     'ArticleContent': ArticleContent
@@ -40,30 +39,59 @@ export default {
 
 <style lang="scss" scoped>
 
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: 1200px) { @content; }
+}
+
 .images {
   display: flex;
   margin-bottom: 60px;
 
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
   .desktop {
     flex: 3;
     margin-right: 20px;
+
+    @include mobile {
+    margin-right: 0;
+  }
   }
 
   .mobile {
     flex: 1;
     margin-left: 20px;
     margin-right: 20px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .logo {
     flex: 1;
     margin-left: 20px;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
 .article {
   display:flex;
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
 }
+
 
 .content-left {
   flex: 2;
@@ -72,6 +100,5 @@ export default {
 
 .content-right {
   flex: 1;
-  margin-left: 30px;
 }
 </style>

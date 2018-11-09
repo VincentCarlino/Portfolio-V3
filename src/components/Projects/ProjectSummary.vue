@@ -3,9 +3,9 @@
       <h4 class="underline">Date</h4>
       <h5>{{ start }} - {{ end }}</h5>
       <h4 class="underline">Technology</h4>
-      <p v-for="skill in skills">{{skill}} <font-awesome-icon icon="check" /></p>
+      <h5 v-for="skill in skills">{{skill}} <font-awesome-icon icon="check" /></h5>
       <h4 class="underline">Roles</h4>
-      <p v-for="role in roles">{{role}} <font-awesome-icon icon="check" /></p>
+      <h5 v-for="role in roles">{{role}} <font-awesome-icon icon="check" /></h5>
   </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
 
     @include mobile {
       margin: 0;
+      margin-bottom: 20px;
     }
 }
 </style>

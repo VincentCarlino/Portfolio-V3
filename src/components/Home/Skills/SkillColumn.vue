@@ -21,11 +21,9 @@ export default {
 }
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-@mixin for-phone-only {
+@mixin mobile {
   @media (max-width: 599px) { @content; }
 }
 
@@ -35,11 +33,10 @@ export default {
 }
 
 .skill-column {
-  flex: 2;
-  margin-top: 40px;
+  flex: 1;
   margin-right: 20px;
 
-  @include for-phone-only {
+  @include mobile {
     margin-left: 20px;
   }
 }

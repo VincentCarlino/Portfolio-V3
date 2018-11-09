@@ -1,5 +1,5 @@
 <template>
-  <div class="bg mass-hike-bg">
+  <div class="bg home-bg">
     <div class="page-wrapper project-wrapper">
       <h1>{{ name }} </h1>
       <div class="images">
@@ -45,6 +45,10 @@ $light-green: #85aa5b;
 $light-green-bg: rgba(133, 170, 91, 0.3);
 $beige: #f7f4e8;
 
+@mixin tablet {
+  @media (max-width: 1200px) { @content; }
+}
+
 @mixin mobile {
   @media (max-width: 599px) { @content; }
 }
@@ -57,9 +61,17 @@ $beige: #f7f4e8;
   display: flex;
   margin-bottom: 60px;
 
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
   .desktop {
     flex: 3;
     margin-right: 20px;
+
+    @include mobile {
+    margin-right: 0;
+  }
   }
 
   .mobile {
@@ -67,7 +79,7 @@ $beige: #f7f4e8;
     margin-left: 20px;
     margin-right: 20px;
 
-    @include mobile {
+    @include tablet {
       display: none;
     }
   }
@@ -102,7 +114,7 @@ $beige: #f7f4e8;
   margin-left: 30px;
 
   @include mobile {
-    margin: 20px 0;
+    margin: 0;
   }
 }
 

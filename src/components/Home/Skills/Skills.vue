@@ -1,11 +1,18 @@
 <template>
   <div class="skills" id="skills">
-    <div class="skillsets">
-      <h2 class="skill-title" v-scroll-reveal>Here are some of my <span class="red">skills</span></h2>
+    <h2 class="skill-title" v-scroll-reveal>Here are some of my <span class="red">skills</span></h2>
+    <div class="skillsets-wrapper">
+      <div class="offset">
+        <!-- <span><div class="icons">
+      <span class="icon"><a href="https://github.com/VincentCarlino"><font-awesome-icon :icon="['fab', 'github']" /></a></span>
+      <span class="icon"><a href="/static/Resume.pdf"><font-awesome-icon :icon="['fa', 'file']" /></a></span>
+      </div></span> -->
+      </div>
+      <div class="skillsets">
       <SkillColumn v-for="(skillset, index) in skillsets"
                   :skillset="skillset"
-                  v-bind:key="skillset.title" v-scroll-reveal="{ delay: index * 100 }"></SkillColumn>
-
+                  v-bind:key="skillset.title" v-scroll-reveal="{ delay: index * 100 }"></SkillColumn> 
+      </div>
     </div>
   </div>
 </template>
@@ -27,31 +34,55 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@mixin for-phone-only {
+@mixin tablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mobile {
   @media (max-width: 599px) {
     @content;
   }
 }
 
-.skill-title {
-  flex: 4;
-  margin-right: 20px;
-}
-
-.offset {
-  flex: 1;
-}
-
-.skillsets {
+.skillsets{
   display: flex;
-  justify-content: end;
+  flex: 2;
 
-  @include for-phone-only {
+  @include mobile {
     flex-direction: column;
   }
 }
 
+.skill-title {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.skillsets-wrapper {
+  display: flex;
+  justify-content: end;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.offset {
+  flex: 1
+}
+
 .skills {
   padding: 100px 0;
+
 }
+
+.icons {
+
+  .icon {
+    font-size: 30px;
+  }
+}
+
 </style>

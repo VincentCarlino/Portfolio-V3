@@ -2,8 +2,10 @@
   <div id="projects">
     <h2 v-scroll-reveal>And here are some things I've helped <span class="red">build</span></h2>
     <ProjectHome  v-scroll-reveal :project="projects['mass-hike']" />
-    <ProjectHome  v-scroll-reveal :project="projects['portfolio-v2']" swap />
-    <Button class="more" link='/projects' text='More projects' />
+    <ProjectHome  v-scroll-reveal :project="projects['catalant']" swap />
+    <div class="more">
+      <Button link='/projects' text='More projects' />
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,7 @@ export default {
 
 <style scoped>
 .more {
-  margin-top: 60px;
+  margin-top: 90px;
+  text-align: center;
 }
 </style>

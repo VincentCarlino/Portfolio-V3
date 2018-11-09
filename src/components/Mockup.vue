@@ -37,13 +37,17 @@ $mh-green: #558959;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 33px 33px 0px 0px rgba(0, 0, 0, 0.14);
+
+  @include mobile {
+    box-shadow: 15px 15px 0px 0px rgba(0, 0, 0, 0.14);
+  }
 }
 
 .bubble {
   height: 15px;
   width: 15px;
   background-color: white;
-  margin: 0 5px;
+  margin: 0 4px;
   border-radius: 100%;
 
   @include mobile {
@@ -58,7 +62,7 @@ $mh-green: #558959;
 .bubbles {
   background-color: $gray;
   display: flex;
-  padding: 15px 10px;
+  padding: 12px 10px;
 
   @include mobile {
     padding: 9px 7px;

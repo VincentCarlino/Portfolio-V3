@@ -1,1 +1,1 @@
-export default ['/static/ct-desktop.png', '/static/ct-mobile.png','/static/masshike-desktop.png','/static/masshike-logo.svg','/static/masshike-mobile.png','/static/portfolio-v2-desktop.png']
+export default ['/static/art/floating-islands.jpg', '/static/art/island.png', '/static/art/map.png', '/static/art/mourao.png', '/static/art/port.jpg', '/static/art/rose.png', '/static/art/wc.jpg']
