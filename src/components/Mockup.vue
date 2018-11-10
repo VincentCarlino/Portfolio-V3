@@ -37,12 +37,11 @@ $mh-green: #558959;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 10px 13px 0px 0px rgba(0, 0, 0, 0.14);
-
 }
 
 .bubble {
-  height: 15px;
-  width: 15px;
+  height: 13px;
+  width: 13px;
   background-color: white;
   margin: 0 4px;
   border-radius: 100%;
