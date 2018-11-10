@@ -74,6 +74,14 @@ export default {
 
 }
 
+h2 {
+  padding-bottom: 10px;
+}
+
+h5 {
+  color: grey;
+}
+
 .text {
   align-self: center;
   flex: 6;
