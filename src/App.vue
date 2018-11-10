@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <transition name="slide" mode="out-in" @after-leave="afterLeave">
-      <router-view/>
+    <transition name="slide" mode="out-in">
+      <router-view></router-view>
     </transition>
   </div>
 </template>
@@ -13,6 +13,9 @@ export default {
   methods: {
     afterLeave () {
       this.$root.$emit('triggerScroll');
+    },
+    handleNav() {
+
     }
   }
 }
@@ -56,11 +59,31 @@ a {
   color: inherit;
 }
 
+
 @mixin mobile {
   @media (max-width: 599px) { @content; }
 }
 @mixin tablet {
   @media (max-width: 1200px) { @content; }
+}
+
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 35px;
+  height: 0;
+
+  @include tablet {
+    font-size: 25px;
+    top: 10px;
+    left: 10px;
+  }
+
+  @include mobile {
+    display: none;
+    position: absolute;
+  }
 }
 
 .page-wrapper {
@@ -71,7 +94,7 @@ a {
   padding-bottom: 50px;
 
   @include tablet {
-    padding: 0 40px;
+    padding: 0 50px;
     padding-bottom: 50px;
   }
 
@@ -186,6 +209,19 @@ p {
 }
 .slide-enter, .slide-leave-to {
   opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 .icon {
