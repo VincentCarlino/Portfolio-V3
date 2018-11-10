@@ -15,7 +15,7 @@ Vue.use(Router)
 const DEFAULT_TITLE = 'Vinny Carlino // Web Engineer';
 
 const router = new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/',
