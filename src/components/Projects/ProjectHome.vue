@@ -49,7 +49,7 @@ export default {
   justify-content: space-between;
   margin-top: 100px;
 
-  @include mobile {
+  @include tablet {
     flex-direction: column;
   }
 
@@ -59,7 +59,7 @@ export default {
   flex: 1;
 
 
-  @include mobile {
+  @include tablet {
     padding: 0;
   }
 }
@@ -68,7 +68,7 @@ export default {
   flex: 8;
   order: 1;
 
-  @include mobile {
+  @include tablet {
     order: 0;
   }
 }
@@ -83,7 +83,7 @@ h2 {
   height: 100%;
   order: 1;
 
-  @include mobile {
+  @include tablet {
     align-self: auto;
   }
 
@@ -95,7 +95,7 @@ h2 {
   margin-right: 20px;
   border-right: solid 1px black;
 
-  @include mobile {
+  @include tablet {
     text-align: left;
     border: none;
   }
@@ -108,7 +108,7 @@ h2 {
   border-left: solid 1px black;
 
 
-  @include mobile {
+  @include tablet {
     padding: 0;
     border: none;
     margin: 0;

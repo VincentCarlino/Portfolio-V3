@@ -36,11 +36,8 @@ $mh-green: #558959;
   width: auto;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 33px 33px 0px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 10px 13px 0px 0px rgba(0, 0, 0, 0.14);
 
-  @include mobile {
-    box-shadow: 15px 15px 0px 0px rgba(0, 0, 0, 0.14);
-  }
 }
 
 .bubble {

@@ -169,7 +169,7 @@ p {
   padding-bottom: 5px;
 
   @include mobile {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 

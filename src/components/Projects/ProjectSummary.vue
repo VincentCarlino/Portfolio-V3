@@ -1,5 +1,6 @@
 <template>
-  <div id="summary">
+  <div id="summary-wrapper">
+    <div id="summary">
       <h4 class="underline">Date</h4>
       <h5>{{ start }} - {{ end }}</h5>
       <h4 class="underline">Technology</h4>
@@ -7,9 +8,10 @@
       <h4 class="underline">Roles</h4>
       <h5 v-for="role in roles">{{role}} <font-awesome-icon icon="check" /></h5>
       <div class="links">
-      <a v-if="github" :href="github" target="blank"><font-awesome-icon class="link" :icon="['fab', 'github']" /></a>
-      <a v-if="link" :href="link" target="blank"><font-awesome-icon class="link" :icon="['fas', 'external-link-alt']" /></a>
+        <a v-if="github" :href="github" target="blank"><font-awesome-icon class="link" :icon="['fab', 'github']" /></a>
+        <a v-if="link" :href="link" target="blank"><font-awesome-icon class="link" :icon="['fas', 'external-link-alt']" /></a>
       </div>
+    </div>
   </div>
 </template>
 
@@ -27,9 +29,7 @@ export default {
   @media (max-width: 599px) { @content; }
 }
 
-#summary {
-    border: solid;
-    padding: 20px;
+#summary-wrapper {
     margin-top: 10px;
     margin-left: 20px;
     position: sticky;
@@ -39,6 +39,14 @@ export default {
       margin: 0;
       margin-bottom: 20px;
     }
+}
+
+#summary {
+  border: solid;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+
 }
 
 .link {
