@@ -1,6 +1,6 @@
 <template>
   <div class="bg home-bg">
-    <router-link class="nav red" to="/"><font-awesome-icon icon="home" /></router-link>
+    <router-link class="nav red" to="/"><font-awesome-icon icon="arrow-left" /></router-link>
     <div class="page-wrapper project-wrapper">
       <h2>Here is a list of all the things I've helped <span class="red">make</span></h2>
       <div class="projects">
