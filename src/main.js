@@ -8,7 +8,7 @@ import Parallax from 'vue-parallaxy'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCode, faWrench, faPaintRoller, faCheck, faCheckCircle, faCheckSquare, faHiking, faDesktop, faArrowRight, faArrowUp, faTerminal, faKey, faFile, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGrinBeam, faKeyboard } from '@fortawesome/free-regular-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ScrollReveal from 'scrollreveal'
 import VueScrollReveal from 'vue-scroll-reveal';
@@ -28,6 +28,7 @@ library.add(faHiking)
 library.add(faArrowRight)
 library.add(faArrowUp)
 library.add(faGithub)
+library.add(faCodepen)
 library.add(faFile)
 library.add(faExternalLinkAlt)
 
