@@ -12,7 +12,7 @@
           <article-content :article="article" :tagline="tagline"/>
         </div>
         <div v-scroll-reveal='{delay : 250}' class="content-right">
-          <ProjectSummary :skills="skills" :start="start" :end="end" :roles="roles" />
+          <ProjectSummary :skills="skills" :start="start" :end="end" :roles="roles" :github="github" :link="link" />
         </div>
       </div>
     </div>

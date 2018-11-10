@@ -71,15 +71,10 @@ export default {
   @include mobile {
     order: 0;
   }
-
 }
 
 h2 {
   padding-bottom: 10px;
-}
-
-h5 {
-  color: grey;
 }
 
 .text {

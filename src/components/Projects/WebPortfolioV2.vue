@@ -13,7 +13,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic atque sequi ea doloribus voluptate doloremque quae facilis magnam. Eum quaerat nisi odio sit necessitatibus error numquam, et distinctio expedita suscipit ipsum culpa id. Voluptas minima officia harum possimus quae ullam ipsam repellendus reprehenderit sunt quasi repellat voluptate iste vero in nihil labore maiores minus fuga nisi, sapiente earum doloribus illo. Pariatur corrupti accusamus alias! Odio deleniti provident sequi possimus nulla, accusantium aut quaerat officia sint quos itaque enim maxime ratione ipsa aspernatur id eos laudantium nobis nemo iure consequuntur consequatur? A ipsa asperiores quos harum aut provident hic eius? Dicta magni nisi optio laborum tempore. Ad consequuntur quia incidunt dignissimos odit laborum nulla, accusamus dolores minima debitis! Tempora delectus nemo quod quo labore obcaecati aspernatur corrupti. Sint cumque repellendus aut accusantium et totam iusto! Sapiente aut consectetur voluptas praesentium dolor.</p>
         </div>
         <div v-scroll-reveal='{delay : 250}' class="content-right">
-          <ProjectSummary :skills="skills" :start="start" :end="end" :roles="roles" />
+          <ProjectSummary :skills="skills" :start="start" :end="end" :roles="roles" :github="github" :link="link"/>
         </div>
       </div>
     </div>

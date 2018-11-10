@@ -12,7 +12,8 @@ export default {
         end: 'Present',
         skills: ['Python', 'HTML', 'CSS', 'Flask'],
         to: '/projects/catalant',
-        roles: ['Engineer']
+        roles: ['Engineer'],
+        link: 'https://gocatalant.com/'
     },
     'mass-hike': {
         name: 'Mass Hike',
@@ -27,7 +28,9 @@ export default {
         end: 'April 2018',
         skills: ['React', 'Javascript'],
         to: '/projects/mass-hike',
-        roles: ['Developer']
+        roles: ['Developer'],
+        github: 'https://github.com/masshikedev/mass-hike-ui',
+        link: 'https://masshike.org'
     },
     'portfolio-v3': {
         name: 'Web Portfolio V3',
@@ -40,7 +43,8 @@ export default {
         end: 'Present',
         skills: ['Vue.js'],
         to: '/projects/portfolio-v3',
-        roles: ['Developer', 'Designer']
+        roles: ['Developer', 'Designer'],
+        github: 'https://github.com/VincentCarlino/Portfolio-V3'
     },
     'dnd': {
         name: 'D&DB',
@@ -53,7 +57,8 @@ export default {
         end: 'April 2018',
         skills: ['SQL', 'Python', 'Flask', 'HTML', 'CSS'],
         to: '/projects/dnd',
-        roles: ['Developer', 'Designer']
+        roles: ['Developer', 'Designer'],
+        github: 'https://github.com/VincentCarlino/DND-DB'
     },
     'portfolio-v2': {
         name: 'Web Portfolio V2',
@@ -65,7 +70,8 @@ export default {
         end: 'April 2018',
         skills: ['HTML', 'CSS'],
         to: '/projects/portfolio-v2',
-        roles: ['Developer', 'Designer']
+        roles: ['Developer', 'Designer'],
+        github: 'https://github.com/VincentCarlino/Web-Portfolio-V2'
     },
     'righttype': {
         name: 'RightType',

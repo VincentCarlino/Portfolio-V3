@@ -71,8 +71,6 @@ const router = new Router({
       component: Project,
       beforeEnter: (to, from, next) => {
         function isValid(param) {
-          console.log(ProjectData);
-          console.log(param);
           return ProjectData[param]
         }
 
