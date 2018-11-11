@@ -44,6 +44,7 @@ $white: #fafafa;
 .tags {
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .project {
