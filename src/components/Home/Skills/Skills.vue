@@ -2,16 +2,10 @@
   <div class="skills" id="skills">
     <h2 class="skill-title" v-scroll-reveal>Here are some of my <span class="red">skills</span></h2>
     <div class="skillsets-wrapper">
-      <div class="offset">
-        <!-- <span><div class="icons">
-      <span class="icon"><a href="https://github.com/VincentCarlino"><font-awesome-icon :icon="['fab', 'github']" /></a></span>
-      <span class="icon"><a href="/static/Resume.pdf"><font-awesome-icon :icon="['fa', 'file']" /></a></span>
-      </div></span> -->
-      </div>
       <div class="skillsets">
       <SkillColumn v-for="(skillset, index) in skillsets"
                   :skillset="skillset"
-                  v-bind:key="skillset.title" v-scroll-reveal="{ delay: index * 100 }"></SkillColumn> 
+                  v-bind:key="skillset.title" v-scroll-reveal="{ delay: index * 100 }"></SkillColumn>
       </div>
     </div>
   </div>

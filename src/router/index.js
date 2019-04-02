@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home/Home'
 import About from '@/components/About'
+import BlogPost from '@/components/BlogPost'
 import Projects from '@/components/Projects/Projects'
 import Project from '@/components/Projects/Project'
 import PageNotFound from '@/components/PageNotFound'
@@ -31,6 +32,14 @@ const router = new Router({
       component: About,
       meta: {
         title: 'Vinny Carlino // About Me'
+      }
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
+      component: BlogPost,
+      meta: {
+        title: ''
       }
     },
     {

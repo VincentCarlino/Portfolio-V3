@@ -5,7 +5,7 @@
       <h2>Here is a gallery of things I've <span class="red">drawn</span></h2>
       <div class="art">
         <div v-scroll-reveal='{ delay: index * 200 }' class="image" v-for="(image, index) in art">
-          <img :src="image" />
+          <a :href="image"><img :src="image"/></a>
         </div>
       </div>
     </div>
@@ -35,19 +35,29 @@ export default {
 .art {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 250px 150px;
 
 }
 
 .image {
     position: relative;
-    grid-column-start: auto;
+    box-shadow: 10px 13px 0px 0px rgba(0, 0, 0, 0.14);
 
-    > img {
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    @media (min-width: 480px) {
+      &:nth-child(5n){
+        grid-area: span 2 / span 2;
+      }
+
+      &:nth-child(3n) {
+        grid-row: span 2;
+      }
     }
 }
 

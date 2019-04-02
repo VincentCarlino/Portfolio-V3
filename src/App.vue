@@ -238,6 +238,11 @@ p {
   min-height: 100vh;
 }
 
+
+.blog-bg {
+  background-color: $white;
+}
+
 .home-bg {
   background: radial-gradient(rgba(246, 73, 66, 0.2) 13%, transparent 5%) 8px
     9px;

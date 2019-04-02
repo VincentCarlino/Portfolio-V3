@@ -1,1 +1,1 @@
-export default ['/static/art/floating-islands.jpg', '/static/art/island.png', '/static/art/map.png', '/static/art/mourao.png', '/static/art/port.jpg', '/static/art/rose.png', '/static/art/wc.jpg']
+export default ['/static/art/floating-islands.jpg', '/static/art/island.png', '/static/art/map.png', '/static/art/mourao.png', '/static/art/port.jpg', '/static/art/rose.png', '/static/art/wc.jpg', 'static/art/pie.jpg', 'static/art/poisonous.jpg', 'static/art/flowing.jpg', 'static/art/roasted.jpg']
