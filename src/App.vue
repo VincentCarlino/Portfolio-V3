@@ -224,6 +224,10 @@ p {
   opacity: 0
 }
 
+strong {
+  font-weight: bold;
+}
+
 .icon {
   font-size: 55px;
   color: $red;
